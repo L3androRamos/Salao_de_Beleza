@@ -6,7 +6,7 @@ import java.sql.SQLException;
 
 public class ConexaoBancodeDados {
     static String host = "localhost";
-    static String database = "aula";
+    static String database = "salao";
     static String user = "root";
     static String password = "123456";
 
