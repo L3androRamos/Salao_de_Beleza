@@ -1,29 +1,18 @@
 package modelo;
 
-import java.util.Date;
-
 public class Servico {
-    private String tipoServico;
-    private Date dataMarcada;
+    private String tipodeServico;
 
-    public Servico(String tipoServico, Date dataMarcada) {
-        this.tipoServico = tipoServico;
-        this.dataMarcada = dataMarcada;
+
+    public Servico() {
+        this.tipodeServico = tipodeServico;
     }
 
-    public String getTipoServico() {
-        return tipoServico;
+    public String getTipodeServico() {
+        return tipodeServico;
     }
 
-    public void setTipoServico(String tipoServico) {
-        this.tipoServico = tipoServico;
-    }
-
-    public Date getDataMarcada() {
-        return dataMarcada;
-    }
-
-    public void setDataMarcada(Date dataMarcada) {
-        this.dataMarcada = dataMarcada;
+    public void setTipodeServico(String tipodeServico) {
+        this.tipodeServico = tipodeServico;
     }
 }
