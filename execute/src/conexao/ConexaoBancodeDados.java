@@ -15,14 +15,6 @@ public class ConexaoBancodeDados {
     private static Connection connection;
     // Conecta ao banco de dados MySQL
 
-    private void conecta() throws SQLException, ClassNotFoundException {
-        Class.forName("com.mysql.cj.jdbc.Driver");
-        if(this.connection == null ){
-            this.connection = DriverManager.getConnection("jdbc:mysql://" + this.host + ":" + this.port + "/" + this.database + "?useTimezone=true&serverTimezone=UTC", this.user, this.password);
-        }else if(this.connection.isClosed()){
-            this.connection = DriverManager.getConnection("jdbc:mysql://" + this.host + ":" + this.port + "/" + this.database + "?useTimezone=true&serverTimezone=UTC", this.user, this.password);
-        }
-    }
     public Connection getConnection() {
         return connection;
     }
