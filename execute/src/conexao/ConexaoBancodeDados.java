@@ -8,7 +8,7 @@ public class ConexaoBancodeDados {
     static String host = "localhost";
     static String database = "salao";
     static String user = "root";
-    static String password = "Umdoistres4!BL";
+    static String password = "123456";
 
     static int port = 3306;
     private static ConexaoBancodeDados instance;
