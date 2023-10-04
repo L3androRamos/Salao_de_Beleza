@@ -32,10 +32,11 @@ public class SalaodeBeleza {
         Servico servico = new Servico();
         out("Digite o tipo de servico a ser realizado:");
         servico.setTipodeServico(scanner.nextLine());
-        String confirmacao = scanner.nextLine();
         out("Verifique os dados");
+
         out("Tipo de serviço: " + servico.getTipodeServico());
-        out("Para confirmar difgite S, para corrigir digite N");
+        out("Para confirmar Serviço cadastrado digite S para salvar ou N para cancelar");
+        String confirmacao = scanner.nextLine().toUpperCase();
         switch (confirmacao){
             case"S":
                 persistenciaServico.Salvar(servico);
@@ -56,12 +57,15 @@ public class SalaodeBeleza {
         Scanner scanner = new Scanner(System.in);
         PersistenciaCliente PersistenciaCliente = new PersistenciaCliente();
 
-        Cliente cliente = new Cliente("");
+
 
         out("Digite o nome do Cliente");
+        String nome  = scanner.nextLine();
+        Cliente cliente = new Cliente(nome);
         out("Verifique os dados do Cliente");
-        out("Nome:" + cliente.getNome());
-        String confirmacao = scanner.nextLine();
+        out("Nome: "+ cliente.getNome());
+        out("Para confirmar Cliente cadastrado digite S para salvar ou N para cancelar");
+        String confirmacao = scanner.nextLine().toUpperCase();
         switch (confirmacao){
             case "S":
                 PersistenciaCliente.Salvar(cliente);
